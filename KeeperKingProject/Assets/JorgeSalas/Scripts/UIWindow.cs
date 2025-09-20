@@ -54,6 +54,8 @@ public class UIWindow : MonoBehaviour
         // if the window is already showing, do nothing
         if(IsShowing) return;
         
+        windowCanvas.gameObject.SetActive(true);
+        
         if (instant)
         {
             //show the window instantly
@@ -82,10 +84,15 @@ public class UIWindow : MonoBehaviour
         else
         {
             // hide the window with animation time
-            windowCanvasGroup.transform.DOScale(Vector3.zero, animationTime).SetEase(easeHide);
-            IsShowing = false;
+            windowCanvasGroup.transform.DOScale(Vector3.zero, animationTime).SetEase(easeHide).OnComplete(DisableCanvas);
         }
             
+    }
+
+    private void DisableCanvas()
+    {
+        windowCanvas.gameObject.SetActive(false);
+        IsShowing = false;
     }
     #endregion
     
