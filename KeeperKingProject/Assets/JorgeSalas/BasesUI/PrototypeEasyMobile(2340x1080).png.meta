@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: f4aef336c037c984d84ff0096fc31299
+guid: 0e2cde34486ef1e44a62f73a41db4123
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6628889518104667436
-    second: Guantes_0
-  - first:
-      213: 7193987385629781166
-    second: Guantes_1
+      213: 1703840270760219031
+    second: PrototypeEasyMobile(2340x1080)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -112,52 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guantes_0
+      name: PrototypeEasyMobile(2340x1080)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 44
-        width: 108
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4da9f0aca147104a0800000000000000
-      internalID: -6628889518104667436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guantes_1
-      rect:
-        serializedVersion: 2
-        x: 91
         y: 0
-        width: 109
-        height: 131
+        width: 2340
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eacaa1f696d26d360800000000000000
-      internalID: 7193987385629781166
+      spriteID: 7911bace2b145a710800000000000000
+      internalID: 1703840270760219031
       vertices: []
       indices: 
       edges: []
@@ -176,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -186,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Guantes_0: -6628889518104667436
-      Guantes_1: 7193987385629781166
+      PrototypeEasyMobile(2340x1080)_0: 1703840270760219031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
