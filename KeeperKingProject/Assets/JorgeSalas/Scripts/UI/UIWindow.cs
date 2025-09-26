@@ -95,7 +95,4 @@ public class UIWindow : MonoBehaviour
         IsShowing = false;
     }
     #endregion
-    
-    
-    
 }

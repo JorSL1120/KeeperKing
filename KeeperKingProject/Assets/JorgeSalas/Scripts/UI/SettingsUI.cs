@@ -32,14 +32,17 @@ public class SettingsUI : UIWindow
     }
     private void CreditsClick()
     {
+        UIManager.Instance.ShowUI(WindowsIDs.Credits);
         Debug.Log("Credits Clicked");
     }
     private void MenuClick()
     {
+        UIManager.Instance.ShowUI(WindowsIDs.Menu);
         Debug.Log("Menu Clicked");
     }
     private void QuitClick()
     {
+        Application.Quit();
         Debug.Log("Quit clicked");
     }
     #endregion
