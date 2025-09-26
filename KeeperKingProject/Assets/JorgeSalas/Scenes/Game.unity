@@ -774,9 +774,9 @@ RectTransform:
   - {fileID: 1605928706}
   m_Father: {fileID: 35430635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 203.29846, y: -300.43396}
   m_SizeDelta: {x: 406.6, y: 181.6511}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &184018876
@@ -2083,9 +2083,9 @@ RectTransform:
   - {fileID: 8754301}
   m_Father: {fileID: 35430635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 203.29846, y: -90.14466}
   m_SizeDelta: {x: 406.6, y: 181.6511}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419933254
@@ -2329,7 +2329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 534411595}
-  - component: {fileID: 534411596}
+  - component: {fileID: 534411597}
   m_Layer: 0
   m_Name: SettingsUI
   m_TagString: Untagged
@@ -2353,7 +2353,7 @@ Transform:
   - {fileID: 1252301153}
   m_Father: {fileID: 2105576576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &534411596
+--- !u!114 &534411597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2362,9 +2362,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 534411594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7aa9b596bfaf1442b881de8ee5c3c6a, type: 3}
+  m_Script: {fileID: 11500000, guid: fde471c6f8b98dc41ac6f5c975883c96, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PopupUI
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsUI
   windowID: Settings
   windowCanvas: {fileID: 1252301156}
   windowCanvasGroup: {fileID: 859703310}
@@ -3075,18 +3075,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 616938326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b24570c0b734f741b9efa5ac9c43416, type: 3}
+  m_Script: {fileID: 11500000, guid: 24e175530e74ffd42b23de4ae7180734, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameUI
-  windowID: Game
+  m_EditorClassIdentifier: Assembly-CSharp::LoseUI
+  windowID: Lose
   windowCanvas: {fileID: 680782881}
   windowCanvasGroup: {fileID: 735990586}
-  hideOnStart: 0
+  hideOnStart: 1
   animationTime: 0.5
   easeShow: 26
   easeHide: 27
-  _buttonPause: {fileID: 0}
-  popupUI: {fileID: 0}
 --- !u!1 &618107312
 GameObject:
   m_ObjectHideFlags: 0
@@ -5278,7 +5276,7 @@ MonoBehaviour:
   easeShow: 26
   easeHide: 27
   _buttonPause: {fileID: 1828035963}
-  popupUI: {fileID: 534411596}
+  popupUI: {fileID: 0}
 --- !u!1 &1068032885
 GameObject:
   m_ObjectHideFlags: 0
@@ -6918,7 +6916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1419354468
 Transform:
   m_ObjectHideFlags: 0
@@ -6944,18 +6942,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1419354467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b24570c0b734f741b9efa5ac9c43416, type: 3}
+  m_Script: {fileID: 11500000, guid: 9655c050a6b27aa4d8921ba1c4ee05b1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameUI
-  windowID: Game
+  m_EditorClassIdentifier: Assembly-CSharp::WinUI
+  windowID: Win
   windowCanvas: {fileID: 1218417137}
   windowCanvasGroup: {fileID: 639386574}
-  hideOnStart: 0
+  hideOnStart: 1
   animationTime: 0.5
   easeShow: 26
   easeHide: 27
-  _buttonPause: {fileID: 0}
-  popupUI: {fileID: 0}
 --- !u!1 &1431976008
 GameObject:
   m_ObjectHideFlags: 0
@@ -9912,6 +9908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1954865650}
+  - component: {fileID: 1954865651}
   m_Layer: 0
   m_Name: CreditsUI
   m_TagString: Untagged
@@ -9935,6 +9932,25 @@ Transform:
   - {fileID: 262342965}
   m_Father: {fileID: 2105576576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954865651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954865649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b091c0005a54db44b3907a227c1cd23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreditsUI
+  windowID: Credits
+  windowCanvas: {fileID: 262342968}
+  windowCanvasGroup: {fileID: 1814814387}
+  hideOnStart: 1
+  animationTime: 0.5
+  easeShow: 26
+  easeHide: 27
 --- !u!1 &1961682454
 GameObject:
   m_ObjectHideFlags: 0
@@ -9977,18 +9993,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1961682454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b24570c0b734f741b9efa5ac9c43416, type: 3}
+  m_Script: {fileID: 11500000, guid: 89b8a2dbe23d1954f98f812d98663ed7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameUI
-  windowID: Game
+  m_EditorClassIdentifier: Assembly-CSharp::SelectLevelUI
+  windowID: Select Level
   windowCanvas: {fileID: 695110129}
   windowCanvasGroup: {fileID: 1114540531}
-  hideOnStart: 0
+  hideOnStart: 1
   animationTime: 0.5
   easeShow: 26
   easeHide: 27
-  _buttonPause: {fileID: 0}
-  popupUI: {fileID: 0}
 --- !u!1 &1970309088
 GameObject:
   m_ObjectHideFlags: 0
@@ -10451,8 +10465,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2049044343}
+  - component: {fileID: 2049044344}
   m_Layer: 0
-  m_Name: InitialMenuUI
+  m_Name: MenuUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10474,6 +10489,25 @@ Transform:
   - {fileID: 95416055}
   m_Father: {fileID: 2105576576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2049044344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049044342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6052da7331e9249bdab84b451a0cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuUI
+  windowID: Menu
+  windowCanvas: {fileID: 95416058}
+  windowCanvasGroup: {fileID: 2131871001}
+  hideOnStart: 1
+  animationTime: 0.5
+  easeShow: 26
+  easeHide: 27
 --- !u!1 &2062492714
 GameObject:
   m_ObjectHideFlags: 0
@@ -10817,7 +10851,7 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   uiWindows:
   - {fileID: 0}
-  - {fileID: 534411596}
+  - {fileID: 0}
 --- !u!1 &2131870999
 GameObject:
   m_ObjectHideFlags: 0
