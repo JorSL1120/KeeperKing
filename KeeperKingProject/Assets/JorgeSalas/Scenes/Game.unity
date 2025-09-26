@@ -977,7 +977,7 @@ GameObject:
   - component: {fileID: 534411595}
   - component: {fileID: 534411596}
   m_Layer: 0
-  m_Name: UISettings
+  m_Name: SettingsUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2462,7 +2462,7 @@ GameObject:
   - component: {fileID: 1030454936}
   - component: {fileID: 1030454937}
   m_Layer: 0
-  m_Name: UIGame
+  m_Name: GameUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
