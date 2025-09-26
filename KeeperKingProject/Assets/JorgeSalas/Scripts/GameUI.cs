@@ -14,7 +14,7 @@ public class GameUI : UIWindow
     [SerializeField] private Button _buttonPause;
     
     [Header("References")]
-    [SerializeField] private PopupUI popupUI;
+    [SerializeField] private SettingsUI settingsUI;
     #endregion
     
     public override void Initialize()
@@ -24,7 +24,7 @@ public class GameUI : UIWindow
     }
     private void PauseClick()
     {
-        popupUI.Show();
+        settingsUI.Show();
         Debug.Log("Pause clicked");
     }
     #endregion

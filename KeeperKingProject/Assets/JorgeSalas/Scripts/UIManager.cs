@@ -90,7 +90,11 @@ public class UIManager : Singleton<UIManager>
 
 public static class WindowsIDs
 {
+    public static string Menu = "MenuUI";
+    public static string Credits = "CreditsUI";
+    public static string Level = "LevelUI";
     public static string Game = "GameUI";
     public static string Settings = "SettingsUI";
-    public static string Inventory = "InventoryUI";
+    public static string Lose = "LoseUI";
+    public static string Win = "WinUI";
 }
