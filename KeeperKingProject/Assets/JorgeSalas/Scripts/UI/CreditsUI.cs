@@ -9,6 +9,8 @@ public class CreditsUI : UIWindow
     [Header("Credits UI")]
     [SerializeField] private Button _buttonClose;
     #endregion
+
+    public int creditBack = 0;
     
     public override void Initialize()
     {
@@ -17,7 +19,16 @@ public class CreditsUI : UIWindow
     }
     private void CloseClick()
     {
-        UIManager.Instance.ShowUI(WindowsIDs.Menu);
+        if (creditBack == 1)
+        {
+            UIManager.Instance.ShowUI(WindowsIDs.Menu);
+            creditBack = 0;
+        }
+        else if (creditBack == 2)
+        {
+            UIManager.Instance.ShowUI(WindowsIDs.Settings);
+            creditBack = 0;
+        }
         Hide();
         Debug.Log("Close clicked");
     }

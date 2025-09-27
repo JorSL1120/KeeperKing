@@ -15,7 +15,9 @@ public class SettingsUI : UIWindow
     [SerializeField] private Button _buttonCredits;
     [SerializeField] private Button _buttonMenu;
     [SerializeField] private Button _buttonQuit;
+    [SerializeField] private CreditsUI _creditsUI;
     #endregion
+    
     
     public override void Initialize()
     {
@@ -33,11 +35,15 @@ public class SettingsUI : UIWindow
     private void CreditsClick()
     {
         UIManager.Instance.ShowUI(WindowsIDs.Credits);
+        _creditsUI.creditBack = 2;
+        Hide();
         Debug.Log("Credits Clicked");
     }
     private void MenuClick()
     {
         UIManager.Instance.ShowUI(WindowsIDs.Menu);
+        UIManager.Instance.HideUI(WindowsIDs.Game);
+        Hide();
         Debug.Log("Menu Clicked");
     }
     private void QuitClick()

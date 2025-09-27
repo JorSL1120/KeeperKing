@@ -10,6 +10,7 @@ public class MenuUI : UIWindow
     [SerializeField] private Button _buttonStart;
     [SerializeField] private Button _buttonCredits;
     [SerializeField] private Button _buttonQuit;
+    [SerializeField] private CreditsUI _creditsUI;
     #endregion
     
     public override void Initialize()
@@ -28,6 +29,7 @@ public class MenuUI : UIWindow
     private void CreditsClick()
     {
         UIManager.Instance.ShowUI(WindowsIDs.Credits);
+        _creditsUI.creditBack = 1;
         Hide();
         Debug.Log("Credits Clicked");
     }
