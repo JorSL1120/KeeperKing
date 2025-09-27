@@ -38,5 +38,6 @@ public class MenuUI : UIWindow
         Application.Quit();
         Debug.Log("Quit clicked");
     }
+
     #endregion
 }

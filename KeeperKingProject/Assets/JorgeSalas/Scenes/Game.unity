@@ -3415,7 +3415,7 @@ MonoBehaviour:
   windowCanvas: {fileID: 680782881}
   windowCanvasGroup: {fileID: 735990586}
   hideOnStart: 1
-  animationTime: 0.5
+  animationTime: 0
   easeShow: 26
   easeHide: 27
   _buttonMenu: {fileID: 1615381360}
@@ -5607,7 +5607,7 @@ MonoBehaviour:
   windowCanvas: {fileID: 2142892317}
   windowCanvasGroup: {fileID: 698290091}
   hideOnStart: 1
-  animationTime: 0.5
+  animationTime: 0
   easeShow: 26
   easeHide: 27
   _buttonPause: {fileID: 1828035963}
@@ -7422,7 +7422,7 @@ MonoBehaviour:
   windowCanvas: {fileID: 1218417137}
   windowCanvasGroup: {fileID: 639386574}
   hideOnStart: 1
-  animationTime: 0.5
+  animationTime: 0
   easeShow: 26
   easeHide: 27
   _buttonMenu: {fileID: 419933254}
@@ -10461,7 +10461,7 @@ MonoBehaviour:
   windowCanvas: {fileID: 262342968}
   windowCanvasGroup: {fileID: 1814814387}
   hideOnStart: 1
-  animationTime: 0.5
+  animationTime: 0
   easeShow: 26
   easeHide: 27
   _buttonClose: {fileID: 1783025462}
@@ -10515,7 +10515,7 @@ MonoBehaviour:
   windowCanvas: {fileID: 695110129}
   windowCanvasGroup: {fileID: 1114540531}
   hideOnStart: 1
-  animationTime: 0.5
+  animationTime: 0
   easeShow: 26
   easeHide: 27
   _buttonEasy: {fileID: 1299832704}
@@ -11024,7 +11024,7 @@ MonoBehaviour:
   windowCanvas: {fileID: 95416058}
   windowCanvasGroup: {fileID: 2131871001}
   hideOnStart: 0
-  animationTime: 0.5
+  animationTime: 0
   easeShow: 1
   easeHide: 0
   _buttonStart: {fileID: 1168210838}

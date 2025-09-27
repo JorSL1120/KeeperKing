@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using NaughtyAttributes;
 
 public class GameUI : UIWindow
 {
@@ -41,6 +42,20 @@ public class GameUI : UIWindow
         easyImage.SetActive(GameManager.Instance.SelectedDifficulty == Difficulty.Easy);
         normalImage.SetActive(GameManager.Instance.SelectedDifficulty == Difficulty.Normal);
         hardImage.SetActive(GameManager.Instance.SelectedDifficulty == Difficulty.Hard);
+    }
+
+
+    [Button]
+    public void ToCanvasWin()
+    {
+        UIManager.Instance.ShowUI(WindowsIDs.Win);
+        Hide();
+    }
+    [Button]
+    public void ToCanvasLose()
+    {
+        UIManager.Instance.ShowUI(WindowsIDs.Lose);
+        Hide();
     }
     #endregion
 }
