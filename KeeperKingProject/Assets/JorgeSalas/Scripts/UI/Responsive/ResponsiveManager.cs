@@ -62,7 +62,7 @@ public class ResponsiveManager : Singleton<ResponsiveManager>
         else
             return DeviceType.Mobile;
     }
-
-    public enum ScreenOrientation { Portrait, Landscape }
-    public enum DeviceType { Mobile, Tablet }
 }
+
+public enum ScreenOrientation { Portrait, Landscape }
+public enum DeviceType { Mobile, Tablet }
