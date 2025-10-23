@@ -34,6 +34,7 @@ public class GameUI : UIWindow
     }
     private void PauseClick()
     {
+        GameManager.Instance.difficultSpeed = 0;
         UIManager.Instance.ShowUI(WindowsIDs.Settings);
         Debug.Log("Pause clicked");
     }
@@ -42,19 +43,19 @@ public class GameUI : UIWindow
         if (GameManager.Instance.SelectedDifficulty == Difficulty.Easy)
         {
             easyImage.SetActive(true);
-            GameManager.Instance.difficultSpeed = 1f;
+            GameManager.Instance.difficultSpeed = 2f;
         }
         
         if (GameManager.Instance.SelectedDifficulty == Difficulty.Normal)
         {
             easyImage.SetActive(true);
-            GameManager.Instance.difficultSpeed = 1.5f;
+            GameManager.Instance.difficultSpeed = 1f;
         }
         
         if (GameManager.Instance.SelectedDifficulty == Difficulty.Hard)
         {
             easyImage.SetActive(true);
-            GameManager.Instance.difficultSpeed = 2f;
+            GameManager.Instance.difficultSpeed = 0.5f;
         }
     }
 
