@@ -84,5 +84,8 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         difficultSpeed = 0;
+        goalsStriker = 0;
+        savesKeeper = 0;
+        penaltiesCount = 0;
     }
 }
