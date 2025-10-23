@@ -25,7 +25,7 @@ public class GoalButtonManager : MonoBehaviour
     public GameObject blockPanel;
 
     private int currentMachineIndex = -1;
-    private bool machineActive = true;
+    public bool machineActive = true;
     private Coroutine machineRoutine;
     #endregion
 

@@ -16,6 +16,8 @@ public class SettingsUI : UIWindow
     [SerializeField] private Button _buttonMenu;
     [SerializeField] private Button _buttonQuit;
     [SerializeField] private CreditsUI _creditsUI;
+    
+    public GoalButtonManager goalButtonManager;
     #endregion
     
     
@@ -29,6 +31,7 @@ public class SettingsUI : UIWindow
     }
     private void BackClick()
     {
+        goalButtonManager.machineActive = true;
         Hide();
         Debug.Log("Back clicked");
     }

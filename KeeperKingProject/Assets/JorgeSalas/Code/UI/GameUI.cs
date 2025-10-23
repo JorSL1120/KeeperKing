@@ -19,6 +19,8 @@ public class GameUI : UIWindow
     [SerializeField] private GameObject easyImage;
     [SerializeField] private GameObject normalImage;
     [SerializeField] private GameObject hardImage;
+    
+    public GoalButtonManager goalButtonManager;
     #endregion
     
     public override void Initialize()
@@ -34,7 +36,7 @@ public class GameUI : UIWindow
     }
     private void PauseClick()
     {
-        GameManager.Instance.difficultSpeed = 0;
+        goalButtonManager.machineActive = false;
         UIManager.Instance.ShowUI(WindowsIDs.Settings);
         Debug.Log("Pause clicked");
     }

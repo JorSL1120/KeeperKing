@@ -1262,6 +1262,7 @@ MonoBehaviour:
   glovesSave: {fileID: 1647447696}
   ball: {fileID: 1015341254}
   blockPanel: {fileID: 2067502520}
+  machineActive: 1
 --- !u!1 &196922273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2826,6 +2827,7 @@ MonoBehaviour:
   _buttonMenu: {fileID: 275606994}
   _buttonQuit: {fileID: 960136868}
   _creditsUI: {fileID: 1954865651}
+  goalButtonManager: {fileID: 188386953}
 --- !u!1 &557140229
 GameObject:
   m_ObjectHideFlags: 0
@@ -5923,6 +5925,7 @@ MonoBehaviour:
   easyImage: {fileID: 1779455570}
   normalImage: {fileID: 37687136}
   hardImage: {fileID: 265346156}
+  goalButtonManager: {fileID: 188386953}
 --- !u!1 &1068032885
 GameObject:
   m_ObjectHideFlags: 0
