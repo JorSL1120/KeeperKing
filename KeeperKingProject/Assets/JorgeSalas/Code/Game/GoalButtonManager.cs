@@ -86,16 +86,19 @@ public class GoalButtonManager : MonoBehaviour
         {
             if (machineActive)
             {
-                int newIndex;
-                do
+                List<int> availableButtons = new List<int>();
+                for (int i = 0; i < goalButtons.Length; i++)
                 {
-                    newIndex = Random.Range(0, goalButtons.Length);
-                } while (newIndex == currentMachineIndex || excludeButton[newIndex]);
-            
-                currentMachineIndex = newIndex;
-                UpdateButtonColors();
-                GameEvents.MachineButtonChanged(currentMachineIndex);
-                Debug.Log("Difficult speed " + GameManager.Instance.difficultSpeed);
+                    if (!excludeButton[i] && i != currentMachineIndex) availableButtons.Add(i);
+                }
+
+                if (availableButtons.Count > 0)
+                {
+                    currentMachineIndex = availableButtons[Random.Range(0, availableButtons.Count)];
+                    UpdateButtonColors();
+                    GameEvents.MachineButtonChanged(currentMachineIndex);
+                    Debug.Log("Difficult speed " + GameManager.Instance.difficultSpeed);
+                }
             }
             
             yield return new WaitForSeconds(GameManager.Instance.difficultSpeed);
