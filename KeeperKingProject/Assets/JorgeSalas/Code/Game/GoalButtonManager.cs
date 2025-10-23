@@ -25,10 +25,6 @@ public class GoalButtonManager : MonoBehaviour
     private int currentMachineIndex = -1;
     private bool machineActive = true;
     private Coroutine machineRoutine;
-    
-    private float hoverCooldown = 2f;
-    private bool[] excludeButton;
-    private float[] hoverTime;
     #endregion
 
     private void Start()
@@ -37,36 +33,12 @@ public class GoalButtonManager : MonoBehaviour
         glovesSave.SetActive(false);
         ball.SetActive(false);
         
-        excludeButton = new bool[goalButtons.Length];
-        hoverTime = new float[goalButtons.Length];
-        
         for (int i = 0; i < goalButtons.Length; i++)
         {
             int index = i;
             goalButtons[i].onClick.AddListener(() => OnButtonClicked(index));
-            var trigger = goalButtons[i].gameObject.AddComponent<EventTrigger>();
-            var entryEnter = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
-            entryEnter.callback.AddListener((_) => StartHover(index));
-            trigger.triggers.Add(entryEnter);
-            
-            var entryExit = new EventTrigger.Entry { eventID = EventTriggerType.PointerExit };
-            entryExit.callback.AddListener((_) => StopHover(index));
-            trigger.triggers.Add(entryExit);
         }
-        
         machineRoutine = StartCoroutine(MachineMoveRoutine());
-    }
-
-    private void Update()
-    {
-        for (int i = 0; i < goalButtons.Length; i++)
-        {
-            if (hoverTime[i] >= 0f)
-            {
-                hoverTime[i] += Time.deltaTime;
-                if (hoverTime[i] >= hoverCooldown) excludeButton[i] = true;
-            }
-        }
     }
 
     private void OnButtonClicked(int index)
@@ -81,29 +53,16 @@ public class GoalButtonManager : MonoBehaviour
         {
             if (machineActive)
             {
-                List<int> candidates = new List<int>();
-                for (int i = 0; i < goalButtons.Length; i++)
+                int newIndex;
+                do
                 {
-                    if (!excludeButton[i]) candidates.Add(i);
-                }
-
-                if (candidates.Count > 0)
-                {
-                    int newIndex;
-                    if (candidates.Count == 1)
-                        newIndex = candidates[0];
-                    else
-                    {
-                        do
-                        {
-                           newIndex = candidates[Random.Range(0, candidates.Count)]; 
-                        } while (newIndex == currentMachineIndex);
-                    }
-                    currentMachineIndex = newIndex;
-                    UpdateButtonColors();
-                    GameEvents.MachineButtonChanged(currentMachineIndex);
-                    Debug.Log("Difficult speed " + GameManager.Instance.difficultSpeed);
-                }
+                    newIndex = Random.Range(0, goalButtons.Length);
+                } while (newIndex == currentMachineIndex);
+                
+                currentMachineIndex = newIndex;
+                UpdateButtonColors();
+                GameEvents.MachineButtonChanged(currentMachineIndex);
+                Debug.Log("Difficult speed " + GameManager.Instance.difficultSpeed);
             }
             
             yield return new WaitForSeconds(GameManager.Instance.difficultSpeed);
@@ -158,16 +117,5 @@ public class GoalButtonManager : MonoBehaviour
             colors.selectedColor = colors.normalColor;
             goalButtons[i].colors = colors;
         }
-    }
-
-    private void StartHover(int index)
-    {
-        hoverTime[index] = 0f;
-    }
-
-    private void StopHover(int index)
-    {
-        hoverTime[index] = -1f;
-        excludeButton[index] = false;
     }
 }
