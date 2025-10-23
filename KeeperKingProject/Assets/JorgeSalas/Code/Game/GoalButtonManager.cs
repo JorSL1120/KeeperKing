@@ -13,6 +13,8 @@ public class GoalButtonManager : MonoBehaviour
     
     [Header("Goal Buttons")]
     public Button[] goalButtons;
+    
+    private GoalButtonHandler[] goalButtonHandlers;
 
     [Header("Visual Elements")]
     public GameObject gloves;
@@ -33,8 +35,13 @@ public class GoalButtonManager : MonoBehaviour
         glovesSave.SetActive(false);
         ball.SetActive(false);
         
+        goalButtonHandlers = new GoalButtonHandler[goalButtons.Length];
+        
         for (int i = 0; i < goalButtons.Length; i++)
         {
+            GoalButtonHandler handler = goalButtons[i].GetComponent<GoalButtonHandler>();
+            if (handler == null) handler = goalButtons[i].AddComponent<GoalButtonHandler>();
+            goalButtonHandlers[i] = handler;
             int index = i;
             goalButtons[i].onClick.AddListener(() => OnButtonClicked(index));
         }
@@ -53,11 +60,42 @@ public class GoalButtonManager : MonoBehaviour
         {
             if (machineActive)
             {
-                int newIndex;
-                do
+                List<int> eligibleIndexes = new List<int>();
+                for (int i = 0; i < goalButtons.Length; i++)
                 {
-                    newIndex = Random.Range(0, goalButtons.Length);
-                } while (newIndex == currentMachineIndex);
+                    if (goalButtonHandlers[i] != null && !goalButtonHandlers[i].isInelegibleForRandom) eligibleIndexes.Add(i);
+                }
+                
+                
+                if (eligibleIndexes.Count > 0)
+                {
+                    // string.Join() crea una cadena de texto con los índices separados por ", "
+                    string indicesStr = string.Join(", ", eligibleIndexes);
+                    Debug.Log($"Botones Elegibles para la Máquina: {indicesStr}");
+                }
+                else
+                {
+                    Debug.LogWarning("¡ATENCIÓN! Ningún botón elegible. La máquina elegirá cualquiera por fallback.");
+                }
+                
+                
+                int newIndex;
+
+                if (eligibleIndexes.Count == 0)
+                {
+                    do
+                    {
+                        newIndex = Random.Range(0, goalButtons.Length);
+                    } while (newIndex == currentMachineIndex);
+                }
+                else
+                {
+                    do
+                    {
+                        int randomIndexInList = Random.Range(0, eligibleIndexes.Count);
+                        newIndex = eligibleIndexes[randomIndexInList];
+                    } while (newIndex == currentMachineIndex);
+                }
                 
                 currentMachineIndex = newIndex;
                 UpdateButtonColors();

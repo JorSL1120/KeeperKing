@@ -708,6 +708,7 @@ GameObject:
   - component: {fileID: 106142547}
   - component: {fileID: 106142546}
   - component: {fileID: 106142545}
+  - component: {fileID: 106142548}
   m_Layer: 0
   m_Name: Button5
   m_TagString: Untagged
@@ -816,6 +817,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106142543}
   m_CullTransparentMesh: 1
+--- !u!114 &106142548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106142543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5a7e4517dd5f241bbb9a370b1a078c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoalButtonHandler
 --- !u!1 &120448457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1274,7 @@ GameObject:
   - component: {fileID: 196922277}
   - component: {fileID: 196922276}
   - component: {fileID: 196922275}
+  - component: {fileID: 196922278}
   m_Layer: 0
   m_Name: Button3
   m_TagString: Untagged
@@ -1369,6 +1383,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196922273}
   m_CullTransparentMesh: 1
+--- !u!114 &196922278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196922273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5a7e4517dd5f241bbb9a370b1a078c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoalButtonHandler
 --- !u!1 &242822730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,6 +3769,7 @@ GameObject:
   - component: {fileID: 665200198}
   - component: {fileID: 665200197}
   - component: {fileID: 665200196}
+  - component: {fileID: 665200199}
   m_Layer: 0
   m_Name: Button0
   m_TagString: Untagged
@@ -3851,6 +3878,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665200194}
   m_CullTransparentMesh: 1
+--- !u!114 &665200199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665200194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5a7e4517dd5f241bbb9a370b1a078c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoalButtonHandler
 --- !u!1 &680782877
 GameObject:
   m_ObjectHideFlags: 0
@@ -4116,6 +4155,7 @@ GameObject:
   - component: {fileID: 716764933}
   - component: {fileID: 716764932}
   - component: {fileID: 716764931}
+  - component: {fileID: 716764934}
   m_Layer: 0
   m_Name: Button2
   m_TagString: Untagged
@@ -4224,6 +4264,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716764929}
   m_CullTransparentMesh: 1
+--- !u!114 &716764934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716764929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5a7e4517dd5f241bbb9a370b1a078c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoalButtonHandler
 --- !u!1 &717163931
 GameObject:
   m_ObjectHideFlags: 0
@@ -4587,6 +4639,7 @@ GameObject:
   - component: {fileID: 808159486}
   - component: {fileID: 808159485}
   - component: {fileID: 808159484}
+  - component: {fileID: 808159487}
   m_Layer: 0
   m_Name: Button1
   m_TagString: Untagged
@@ -4695,6 +4748,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808159482}
   m_CullTransparentMesh: 1
+--- !u!114 &808159487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808159482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5a7e4517dd5f241bbb9a370b1a078c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoalButtonHandler
 --- !u!1 &827658160
 GameObject:
   m_ObjectHideFlags: 0
@@ -6348,6 +6413,7 @@ GameObject:
   - component: {fileID: 1170889251}
   - component: {fileID: 1170889250}
   - component: {fileID: 1170889249}
+  - component: {fileID: 1170889252}
   m_Layer: 0
   m_Name: Button4
   m_TagString: Untagged
@@ -6456,6 +6522,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170889247}
   m_CullTransparentMesh: 1
+--- !u!114 &1170889252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170889247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5a7e4517dd5f241bbb9a370b1a078c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoalButtonHandler
 --- !u!1 &1212399020
 GameObject:
   m_ObjectHideFlags: 0
