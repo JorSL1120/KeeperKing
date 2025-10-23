@@ -39,9 +39,23 @@ public class GameUI : UIWindow
     }
     private void ShowDifficulty()
     {
-        easyImage.SetActive(GameManager.Instance.SelectedDifficulty == Difficulty.Easy);
-        normalImage.SetActive(GameManager.Instance.SelectedDifficulty == Difficulty.Normal);
-        hardImage.SetActive(GameManager.Instance.SelectedDifficulty == Difficulty.Hard);
+        if (GameManager.Instance.SelectedDifficulty == Difficulty.Easy)
+        {
+            easyImage.SetActive(true);
+            GameManager.Instance.difficultSpeed = 1f;
+        }
+        
+        if (GameManager.Instance.SelectedDifficulty == Difficulty.Normal)
+        {
+            easyImage.SetActive(true);
+            GameManager.Instance.difficultSpeed = 1.5f;
+        }
+        
+        if (GameManager.Instance.SelectedDifficulty == Difficulty.Hard)
+        {
+            easyImage.SetActive(true);
+            GameManager.Instance.difficultSpeed = 2f;
+        }
     }
 
 
