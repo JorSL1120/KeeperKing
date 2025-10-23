@@ -36,21 +36,15 @@ public class GoalButtonManager : MonoBehaviour
         blockPanel.SetActive(false);
         glovesSave.SetActive(false);
         ball.SetActive(false);
+        
+        excludeButton = new bool[goalButtons.Length];
+        hoverTime = new float[goalButtons.Length];
+        
         for (int i = 0; i < goalButtons.Length; i++)
         {
             int index = i;
             goalButtons[i].onClick.AddListener(() => OnButtonClicked(index));
-        }
-
-        excludeButton = new bool[goalButtons.Length];
-        hoverTime = new float[goalButtons.Length];
-        machineRoutine = StartCoroutine(MachineMoveRoutine());
-
-        for (int i = 0; i < goalButtons.Length; i++)
-        {
-            int index = i;
             var trigger = goalButtons[i].gameObject.AddComponent<EventTrigger>();
-
             var entryEnter = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
             entryEnter.callback.AddListener((_) => StartHover(index));
             trigger.triggers.Add(entryEnter);
@@ -59,15 +53,15 @@ public class GoalButtonManager : MonoBehaviour
             entryExit.callback.AddListener((_) => StopHover(index));
             trigger.triggers.Add(entryExit);
         }
-        excludeButton = new bool[goalButtons.Length];
-        hoverTime = new float[goalButtons.Length];
+        
+        machineRoutine = StartCoroutine(MachineMoveRoutine());
     }
 
     private void Update()
     {
         for (int i = 0; i < goalButtons.Length; i++)
         {
-            if (hoverTime[i] >= 0)
+            if (hoverTime[i] >= 0f)
             {
                 hoverTime[i] += Time.deltaTime;
                 if (hoverTime[i] >= hoverCooldown) excludeButton[i] = true;
@@ -87,15 +81,25 @@ public class GoalButtonManager : MonoBehaviour
         {
             if (machineActive)
             {
-                List<int> availableButtons = new List<int>();
+                List<int> candidates = new List<int>();
                 for (int i = 0; i < goalButtons.Length; i++)
                 {
-                    if (!excludeButton[i] && i != currentMachineIndex) availableButtons.Add(i);
+                    if (!excludeButton[i]) candidates.Add(i);
                 }
 
-                if (availableButtons.Count > 0)
+                if (candidates.Count > 0)
                 {
-                    currentMachineIndex = availableButtons[Random.Range(0, availableButtons.Count)];
+                    int newIndex;
+                    if (candidates.Count == 1)
+                        newIndex = candidates[0];
+                    else
+                    {
+                        do
+                        {
+                           newIndex = candidates[Random.Range(0, candidates.Count)]; 
+                        } while (newIndex == currentMachineIndex);
+                    }
+                    currentMachineIndex = newIndex;
                     UpdateButtonColors();
                     GameEvents.MachineButtonChanged(currentMachineIndex);
                     Debug.Log("Difficult speed " + GameManager.Instance.difficultSpeed);
@@ -158,12 +162,12 @@ public class GoalButtonManager : MonoBehaviour
 
     private void StartHover(int index)
     {
-        hoverTime[index] = 0;
+        hoverTime[index] = 0f;
     }
 
     private void StopHover(int index)
     {
-        hoverTime[index] = -1;
+        hoverTime[index] = -1f;
         excludeButton[index] = false;
     }
 }
