@@ -1344,10 +1344,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 650360344}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.26869428, y: 0.056131892}
-  m_AnchorMax: {x: 0.7319071, y: 0.110167876}
+  m_AnchorMin: {x: 0.0016951947, y: 0.056131836}
+  m_AnchorMax: {x: 0.99770373, y: 0.11016793}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0.000061035156}
+  m_SizeDelta: {x: -0.000015258789, y: -0.0000055175806}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242822732
 MonoBehaviour:
@@ -1403,8 +1403,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1864,7 +1864,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 427.4099, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275606994
 MonoBehaviour:
@@ -5387,7 +5387,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 427.4099, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &960136868
 MonoBehaviour:
@@ -5557,6 +5557,7 @@ GameObject:
   - component: {fileID: 1014403564}
   - component: {fileID: 1014403566}
   - component: {fileID: 1014403565}
+  - component: {fileID: 1014403567}
   m_Layer: 0
   m_Name: Gloves
   m_TagString: Untagged
@@ -5621,6 +5622,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014403563}
   m_CullTransparentMesh: 1
+--- !u!114 &1014403567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014403563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c515c197d41f03f409b2b50a5bbd8acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gloves
+  speed: 20
+  range: 20
 --- !u!1 &1030454935
 GameObject:
   m_ObjectHideFlags: 0
@@ -6534,7 +6549,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 427.4099, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235434723
 MonoBehaviour:
@@ -11051,7 +11066,7 @@ MonoBehaviour:
   m_Spacing: 40
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
+  m_ChildControlWidth: 0
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
@@ -11610,7 +11625,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
