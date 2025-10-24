@@ -896,6 +896,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   difficultSpeed: 0
   gameUI: {fileID: 1030454937}
+  penaltiesMarkers:
+  - {fileID: 943200369}
+  - {fileID: 1399703893}
+  - {fileID: 423928406}
+  - {fileID: 1772505188}
+  - {fileID: 1436009782}
+  visibleAlpha: 1
+  fadedAlpha: 0.3
+  keeperScoreText: {fileID: 1431976010}
+  strikerScoreText: {fileID: 1516377944}
 --- !u!4 &120448459
 Transform:
   m_ObjectHideFlags: 0
