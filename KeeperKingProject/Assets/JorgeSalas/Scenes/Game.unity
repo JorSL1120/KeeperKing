@@ -3595,6 +3595,7 @@ GameObject:
   - component: {fileID: 650360346}
   - component: {fileID: 650360345}
   - component: {fileID: 650360347}
+  - component: {fileID: 650360348}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -3619,8 +3620,8 @@ RectTransform:
   - {fileID: 2045915869}
   m_Father: {fileID: 1970309089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
-  m_AnchorMin: {x: 0.2999391, y: 0.07283116}
-  m_AnchorMax: {x: 0.69946927, y: 0.9295981}
+  m_AnchorMin: {x: 0.26260832, y: 0.15933558}
+  m_AnchorMax: {x: 0.73808736, y: 0.81219906}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3679,6 +3680,23 @@ MonoBehaviour:
   mobileAnchorMax: {x: 0.69946927, y: 0.9295981}
   tabletAnchorMin: {x: 0, y: 0}
   tabletAnchorMax: {x: 0, y: 0}
+--- !u!114 &650360348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650360343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c649cc7e2a6c03f47a6c75579d84130f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResponsiveElement
+  rectTransform: {fileID: 650360344}
+  mobileAnchorMin: {x: 0.2999391, y: 0.07283116}
+  mobileAnchorMax: {x: 0.69946927, y: 0.9295981}
+  tabletAnchorMin: {x: 0.26260832, y: 0.15933558}
+  tabletAnchorMax: {x: 0.73808736, y: 0.81219906}
 --- !u!1 &665200194
 GameObject:
   m_ObjectHideFlags: 0
@@ -12248,7 +12266,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
