@@ -80,6 +80,7 @@ public class UIWindow : MonoBehaviour
         {
             //hide the window instantly
             windowCanvasGroup.transform.DOScale(Vector3.zero, 0f);
+            //DisableCanvas();
         }
         else
         {

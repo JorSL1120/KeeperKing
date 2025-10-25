@@ -45,18 +45,25 @@ public class GameUI : UIWindow
         if (GameManager.Instance.SelectedDifficulty == Difficulty.Easy)
         {
             easyImage.SetActive(true);
-            GameManager.Instance.difficultSpeed = 2f;
+            normalImage.SetActive(false);
+            hardImage.SetActive(false);
+            GameManager.Instance.difficultSpeed = 1.5f;
         }
         
         if (GameManager.Instance.SelectedDifficulty == Difficulty.Normal)
-        { normalImage.SetActive(true);
-            GameManager.Instance.difficultSpeed = 1f;
+        { 
+            normalImage.SetActive(true);
+            easyImage.SetActive(false);
+            hardImage.SetActive(false);
+            GameManager.Instance.difficultSpeed = 0.7f;
         }
         
         if (GameManager.Instance.SelectedDifficulty == Difficulty.Hard)
         {
             hardImage.SetActive(true);
-            GameManager.Instance.difficultSpeed = 0.5f;
+            easyImage.SetActive(false);
+            normalImage.SetActive(false);
+            GameManager.Instance.difficultSpeed = 0.45f;
         }
     }
 

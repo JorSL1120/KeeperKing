@@ -46,6 +46,7 @@ public class SettingsUI : UIWindow
     {
         UIManager.Instance.ShowUI(WindowsIDs.Menu);
         UIManager.Instance.HideUI(WindowsIDs.Game);
+        GameManager.Instance.EndGame();
         Hide();
         Debug.Log("Menu Clicked");
     }

@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void EndGame()
+    public void EndGame()
     {
         difficultSpeed = 0;
         goalsStriker = 0;
