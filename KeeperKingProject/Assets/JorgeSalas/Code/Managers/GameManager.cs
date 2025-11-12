@@ -71,10 +71,16 @@ public class GameManager : MonoBehaviour
         penaltiesCount++;
 
         if (saved)
+        {
             savesKeeper++;
+            //StartCoroutine(AudioManager.Instance.CelebrationAudio());
+        }
         else
+        {
             goalsStriker++;
-        
+            //StartCoroutine(AudioManager.Instance.BoosAudio());
+        }
+
         UpdateScoreUI();
 
         if (savesKeeper >= penaltiesToWin)

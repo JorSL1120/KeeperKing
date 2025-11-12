@@ -124,6 +124,9 @@ public class GoalButtonManager : MonoBehaviour
             
             ball.transform.position = goalButtons[index].transform.position;
             ball.SetActive(true);
+            
+            AudioManager.Instance.PlayCelebration();
+            AudioManager.Instance.StopBackgroundMusic();
         }
         else
         {
@@ -132,6 +135,10 @@ public class GoalButtonManager : MonoBehaviour
             
             ball.transform.position = goalButtons[currentMachineIndex].transform.position;
             ball.SetActive(true);
+            
+            AudioManager.Instance.PlayBoos();
+            AudioManager.Instance.StopBackgroundMusic();
+
         }
         
         GameEvents.RoundResult(saved);
@@ -143,6 +150,9 @@ public class GoalButtonManager : MonoBehaviour
         machineActive = true;
         glovesSave.SetActive(false);
         ball.SetActive(false);
+        AudioManager.Instance.PlayBackgroundMusic();
+        AudioManager.Instance.StopCelebration();
+        AudioManager.Instance.StopBoos();
     }
 
     private void UpdateButtonColors()
