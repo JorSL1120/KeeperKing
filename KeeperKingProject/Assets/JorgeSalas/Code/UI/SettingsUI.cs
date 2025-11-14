@@ -44,6 +44,7 @@ public class SettingsUI : UIWindow
     }
     private void MenuClick()
     {
+        goalButtonManager.machineActive = true;
         UIManager.Instance.ShowUI(WindowsIDs.Menu);
         UIManager.Instance.HideUI(WindowsIDs.Game);
         GameManager.Instance.EndGame();
