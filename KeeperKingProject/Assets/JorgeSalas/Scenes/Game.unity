@@ -2923,6 +2923,7 @@ GameObject:
   - component: {fileID: 551754497}
   - component: {fileID: 551754499}
   - component: {fileID: 551754498}
+  - component: {fileID: 551754500}
   m_Layer: 0
   m_Name: CreditsText
   m_TagString: Untagged
@@ -2944,10 +2945,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1290368078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4524, y: -8.714897}
-  m_SizeDelta: {x: 822.6765, y: 379.4663}
+  m_AnchorMin: {x: 0.030133024, y: 0.018008636}
+  m_AnchorMax: {x: 0.97319686, y: 0.9396578}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &551754498
 MonoBehaviour:
@@ -2975,15 +2976,17 @@ MonoBehaviour:
     Salas
 
 
-    Music & Sound Effects
+    Music
 
-    YouTube Studio (Audio Library)
+    "Window Shopping" for Jeremy Black
+
+    (YouTube Audio
+    Library)
 
 
-    Special
-    Thanks
+    Sound Effects
 
-    To everyone who supported the development of this project.'
+    YouTube Studio (Audio Library)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32cfde05811bd654a9848a88a6d1133b, type: 2}
   m_sharedMaterial: {fileID: -7095684188694105753, guid: 32cfde05811bd654a9848a88a6d1133b, type: 2}
@@ -3062,6 +3065,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551754496}
   m_CullTransparentMesh: 1
+--- !u!114 &551754500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551754496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c649cc7e2a6c03f47a6c75579d84130f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResponsiveElement
+  rectTransform: {fileID: 551754497}
+  mobileAnchorMin: {x: 0.030133024, y: 0.018008636}
+  mobileAnchorMax: {x: 0.97319686, y: 0.9396578}
+  tabletAnchorMin: {x: 0.030133024, y: 0.018008636}
+  tabletAnchorMax: {x: 0.97319686, y: 0.9396578}
 --- !u!1 &557140229
 GameObject:
   m_ObjectHideFlags: 0
@@ -7693,6 +7713,7 @@ GameObject:
   - component: {fileID: 1290368078}
   - component: {fileID: 1290368080}
   - component: {fileID: 1290368079}
+  - component: {fileID: 1290368081}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -7717,7 +7738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: -0.000000026867369, y: 1.5197828e-12}
   m_AnchorMax: {x: 1.0000023, y: 1.0000012}
-  m_AnchoredPosition: {x: 0.0000058593578, y: -1.5279511e-10}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.0000117187155, y: -3.0559022e-10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290368079
@@ -7733,7 +7754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8784314}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7758,6 +7779,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290368077}
   m_CullTransparentMesh: 1
+--- !u!114 &1290368081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290368077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c649cc7e2a6c03f47a6c75579d84130f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResponsiveElement
+  rectTransform: {fileID: 1290368078}
+  mobileAnchorMin: {x: -0.000000026867369, y: 1.5197828e-12}
+  mobileAnchorMax: {x: 1.0000023, y: 1.0000012}
+  tabletAnchorMin: {x: -0.000000026867369, y: 1.5197828e-12}
+  tabletAnchorMax: {x: 1.0000023, y: 1.0000012}
 --- !u!1 &1299832702
 GameObject:
   m_ObjectHideFlags: 0
